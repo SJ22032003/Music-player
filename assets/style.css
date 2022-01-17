@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap');
+
+body{
+    min-height: 100vh;
+    background: url(bg/bg1.svg) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Spartan', sans-serif;
+    overflow-y: hidden;
+}
+.player-container{
+    height: fit-content;
+    width: 400px;
+    background: linear-gradient(180deg,rgb(24, 23, 23),rgb(31, 27, 27));
+    border-radius: 20px;
+    box-shadow: 0 15px 30px 5px rgba(0,0,0,0.3);
+}
+.img-container{
+    position: relative;
+    top: -50px;
+    left: 50px;
+    height:300px;
+    width: 300px;
+}
+.img-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0px 2px 1px 10px rgba(0, 0, 0, 0.123);
+}
+h2 {
+    color: white;
+    text-align: center;
+}
+h3 {
+    color: white;
+    font-weight: 400;
+    text-align: center;
+}
+/* Progress */
+.progress-container {
+    background: #fff;
+    border-radius: 7px;
+    cursor: pointer;
+    margin: 40px 20px;
+    height: 4px;
+    width: 90%;
+  }
+  
+  .progress {
+    background: #000000;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+  }
+  
+  .duration-wrapper {
+    position: relative;
+    top: -25px;
+    display: flex;
+    justify-content: space-between;
+  }
+  span{
+      color: white;
+      font-size: 15px;
+      user-select: none;
+  }
+/* Controls */
+.player-controls {
+    position: relative;
+    top: -15px;
+    left: 50px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .fas {
+    font-size: 30px;
+    color: rgb(218, 212, 212);
+    margin-right: 30px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .fas:active{
+      transform: scaleY(1.12);
+  }
+  .fas:hover{
+      filter: brightness(110%);
+  }
+
+  .main-button {
+    font-size: 40px;
+    position: relative;
+    top: 3px;
+  }
+  /* Media Query: iPhone (Vertical) */
+@media screen and (max-width: 378px) {
+
+
+    .img-container {
+      left: 17px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    h3 {
+      font-size: 15px;
+    }
+  
+    .player-controls {
+      top: -10px;
+      left: 30px;
+    }
+    .fas{
+        font-size: 25px;
+    }
+  }
